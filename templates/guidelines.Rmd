@@ -1,0 +1,24 @@
+---
+title: "Guidelines"
+author: "Florian Mayer, DBCA"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Where the code lives
+There are several workflows to write R scripts.
+
+### Scripts spewing products
+* Data lives on local spreadsheets or on local file shares. (`C:\data\spreasheet.csv`)
+* R code lives inside a script. (`script.R`)
+* The code runs in the current working directory (bonus is predictable).
+* The code is commented inline.
+* The script spews outputs (bonus if in predictable location).
+
+### RMarkdown: story about code
+### RMarkdown: story about data
+### RMarkdown: story with data
