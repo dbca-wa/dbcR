@@ -12,13 +12,45 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Where the code lives
 There are several workflows to write R scripts.
 
-### Scripts spewing products
+### Scripts creating products
 * Data lives on local spreadsheets or on local file shares. (`C:\data\spreasheet.csv`)
 * R code lives inside a script. (`script.R`)
 * The code runs in the current working directory (bonus is predictable).
 * The code is commented inline.
-* The script spews outputs (bonus if in predictable location).
+* The script creates local outputs (bonus if in predictable location).
 
 ### RMarkdown: story about code
+An RMarkdown document where the prose explains the code. 
+Code could be data manipulation, data analysis, data visualisation.
+
+#### Lower maturity
+Code with inline comments.
+
+#### Higher maturity
+Package.
+
+* refactor "the working bits" into pure functions
+* document functions
+* write test cases
+* write vignette with worked examples
+* create package from above
+
 ### RMarkdown: story about data
+An RMarkdown workbook where the code analyses and visualises code, and the prose discusses the findings.
+
+#### Applications
+Data ETL workbooks. Examples (DBCA staff only): [Threatened Fauna ETL](https://data.dpaw.wa.gov.au/dataset/79e90d7b-33a3-4aa0-8634-8a12033eb21d/resource/761af921-94ad-4383-be2c-300713c37e98/download/data_etl_fauna.html), 
+[Threatened Flora ETL](https://data.dpaw.wa.gov.au/dataset/8075e9ba-1133-446a-8018-4e9b42697746/resource/d1fccebb-02e2-4a40-aba4-c4d6ad012edb/download/data_etl_flora.html).
+
+
 ### RMarkdown: story with data
+RMarkdown reports with built-in data analysis and visualisation.
+Examples (DBCA staff only):
+[Turtle Nesting Census reports](https://data.dpaw.wa.gov.au/dataset/turtle-tracks)
+
+#### Higher maturity
+Sweave documents (Latex and R).
+Examples: [WAMMP MPA reports](https://data.dpaw.wa.gov.au/dataset/mpa-reports)
+Template: [CKAN o' Sweave](https://github.com/dbca-wa/ckan-o-sweave)
+
+
