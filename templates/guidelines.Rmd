@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Where the code lives
+## How the code is written
 There are several workflows to write R scripts.
 
 ### Scripts creating products
@@ -53,4 +53,73 @@ Sweave documents (Latex and R).
 Examples: [WAMMP MPA reports](https://data.dpaw.wa.gov.au/dataset/mpa-reports)
 Template: [CKAN o' Sweave](https://github.com/dbca-wa/ckan-o-sweave)
 
+## Where the data lives
 
+### Local data
+Individual desktop computers
+
+### Intranet
+File shares without metadata and clear ownership, no API access
+
+### Data catalogue
+Data snapshots with metadata and clear ownership, API access
+
+Example: Get data from data catalogue
+```{r data_from_ckan}
+```
+
+### Data portals
+BioSys, TSC, anything online with an API
+
+Example: Get data from BioSys
+```{r data_from_biosys}
+```
+
+
+## Where the products live
+
+### Local products
+PNGs in your workdir
+
+### Intranet
+File shares
+
+### Data catalogue
+Ideal place.
+
+### Cloud storage
+For file sharing with external collaborators.
+
+Example: upload to Google Drive.
+```{r upload_to_googledrive}
+```
+
+
+## Where the codes lives
+
+### Local code
+Individual desktop computers
+
+### Version control
+GitHub, with sensitive data excluded
+
+Collaboration through several workflows:
+
+* One master
+* forks and pull requests
+
+## Where the code runs
+
+### RStudio Desktop
+Per machine
+
+### RStudio Server
+Accessible to DBCA staff from public internet.
+
+## How the code runs
+
+### Projects
+Keep namespace and environment clean by using projects (from version control, fork this repo or create your own).
+
+### History
+Global setting: Never save history
